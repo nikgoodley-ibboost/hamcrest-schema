@@ -66,6 +66,25 @@
           <target>1.5</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>com.google.code.maven-license-plugin</groupId>
+        <artifactId>maven-license-plugin</artifactId>
+        <version>1.4.0</version>
+        <inherited>true</inherited>
+        <configuration>
+          <header>src/etc/header.txt</header>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
