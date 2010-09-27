@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** A matcher, validating various types of objects against a RelaxNG schema. */
-class RelaxNGMatcher extends TypeSafeDiagnosingMatcher<Object> {
+public class RelaxNGMatcher extends TypeSafeDiagnosingMatcher<Object> {
 
     private final Schema schema;
     private final String id;

@@ -12,10 +12,14 @@
       <id>Forumarchivebuilder</id>
       <url>http://forumarchivebuilder.googlecode.com/svn/repository</url>
     </repository>
+    <repository>
+      <id>hamcrest-schema-ext</id>
+      <url>http://hamcrest-schema.googlecode.com/svn/ext</url>
+    </repository>
   </repositories>
   <distributionManagement>
     <snapshotRepository>
-      <id>hamcrest-schema-rule-snapshots</id>
+      <id>hamcrest-schema-snapshots</id>
       <name>Snapshot repository</name>
       <url>svn:https://hamcrest-schema.googlecode.com/svn/snapshots</url>
     </snapshotRepository>
@@ -58,8 +62,8 @@
     </dependency>
     <dependency>
       <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.7</version>
+      <artifactId>junit-dep</artifactId>
+      <version>4.8.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
