@@ -7,6 +7,19 @@
   <description>
     Hamcrest matchers for XML schema validation. 
   </description>
+  <repositories>
+    <repository>
+      <id>Forumarchivebuilder</id>
+      <url>http://forumarchivebuilder.googlecode.com/svn/repository</url>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>hamcrest-schema-rule-snapshots</id>
+      <name>Snapshot repository</name>
+      <url>svn:https://hamcrest-schema.googlecode.com/svn/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.hamcrest</groupId>
@@ -86,5 +99,12 @@
         </executions>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.jvnet.wagon-svn</groupId>
+        <artifactId>wagon-svn</artifactId>
+        <version>1.9</version>
+      </extension>
+    </extensions>
   </build>
 </project>
