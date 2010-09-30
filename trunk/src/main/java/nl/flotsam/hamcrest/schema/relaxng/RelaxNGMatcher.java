@@ -63,11 +63,14 @@ public class RelaxNGMatcher extends TypeSafeDiagnosingMatcher<Object> {
                 return validator.validate(verifier, verifiable);
             }
         } catch (SAXException e) {
-            throw new IllegalStateException("Failed to process node.", e);
+            description.appendText("Failed to parse document: " + e.getMessage());
+            return false;
         } catch (VerifierConfigurationException e) {
-            throw new IllegalStateException("Failed to create verifier from " + schema);
+            description.appendText("Failed to use given schema for verification: " + e.getMessage());
+            return false;
         } catch (IOException e) {
-            throw new IllegalStateException("Failed to read from input.", e);
+            description.appendText("Failed to read from input: " + e.getMessage());
+            return false;
         }
     }
 
